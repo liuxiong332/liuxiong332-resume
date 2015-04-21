@@ -6,13 +6,13 @@ layout: page
 
 # 个人信息
 
-* **毕业院校**: `北京理工大学`
-* **工作年限**: `3年`
+* **毕业院校**: *北京理工大学*
+* **工作年限**: *3年*
 * **博客**: [http://liuxiong332.github.io](http://liuxiong332.github.io)
 * **Github**: [https://github.com/liuxiong332](https://github.com/liuxiong332)
-* **手机**: `111******`
-* **Email**: `liuxiong332@163.com`
-* **期望职位**: `NodeJS工程师，前端工程师`
+* **手机**: *111*******
+* **Email**: *liuxiong332@163.com*
+* **期望职位**: *NodeJS工程师，前端工程师*
 
 ----
 
@@ -50,14 +50,14 @@ layout: page
 
 # 开源作品
 
-## Atom
+### Atom
 
-`Atom`是github开发的**The hackable editor**。使用我很喜欢的coffee编写，模块独立，逻辑清晰，是我关注的开源项目之一。在业余时间我为`Atom`提交了两个PR：
+`Atom`是github开发的**The hackable editor**。使用我很喜欢的`coffee`编写，模块独立，逻辑清晰，是我关注的开源项目之一。在业余时间我为`Atom`提交了两个**PR**：
 
 * 修正了拖拽打开文件的bug；
-* 增加了特性-可自由用鼠标拖动缩放工作区的大小，而且保存状态从而使得重启后保持不变。
+* 增加了特性--可自由用鼠标拖动缩放工作区的大小，而且保存状态从而使得重启后保持不变。
 
-## Yeoman插件
+### Yeoman插件
 
 发布了若干个**Yeoman**模板插件。
 
@@ -65,9 +65,9 @@ layout: page
 
 * `generator-karma-browserify`用来为前端APP增加`karma`和`browserify`支持。`browserify`使得前端可以可以重用`Nodejs`模块，最重要的是可以使用CMD模型进行编程。
 
-## http-ext
+### http-ext
 
-`http-ext`是可扩展的、灵活性高的http client类库。开发灵感来自于`express`。核心只包含基本框架，需要实现的协议或者扩展将通过插件的方式来增加。当前包含如下插件：
+`http-ext`是可扩展的、灵活性高的**http client**类库。开发灵感来自于`express`。核心只包含基本框架，需要实现的协议或者扩展将通过插件的方式来增加。当前包含如下插件：
 
 * `http-ext-ntlm`实现了NTLM验证协议。
 
@@ -77,9 +77,9 @@ layout: page
 
 `libxmljs-builder`是`nodejs`的XML构建类库，灵感来自于`Ruby`的XML库`Nokogiri`。这个类库简化了构建XML的繁琐过程(从未如此畅快的构造XML)，极大提高了编程效率。
 
-## node-viewpoint
+## Viewpoint
 
-`Exchange API`。实现了`Exchange`邮件协议。
+`Exchange API`。实现了`Exchange`邮件协议，是`Xmail`的协议实现依赖包。
 
 ## Xmail
 
