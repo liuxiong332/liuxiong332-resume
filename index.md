@@ -19,6 +19,10 @@ layout: page
 # 个人描述
 * 技术控，`Coffee`和`Ruby`的忠实爱好者，对各种新奇技术有强烈的好奇心；
 * 崇尚优美和简约，追求优雅的编程风格，有着强烈的代码洁癖；
+* 熟练使用Coffee，Javascript等前端语言，熟悉ES6，熟悉Sass/Less等CSS模板语言；
+* 熟悉MVC框架Angular，UI类库React，jQuery和underscore等工具类库；
+* 熟悉使用Grunt和Gulp进行自动化构建工具，熟悉使用browserify、lint、uglify等工具；
+* 熟悉Nodejs框架，Nodejs爱好者。
 
 # 工作经历
 
@@ -57,3 +61,25 @@ Atom是github开发的**The hackable editor**。使用我很喜欢的coffee编�
 
 **Yeoman**插件。`generator-node-gulp-coffee`用来生成使用coffee和gulp的模板，是我最常用的nodejs模板(集成了lint、test、converage、Travis CI等功能)。
 'generator-karma-browserify`用来为前端APP增加karma和browserify支持。browserify使得前端可以可以重用nodejs模块，最重要的是可以使用CMD模型进行编程。
+
+### http-ext和http-ext-ntlm
+
+`http-ext`是可扩展的、灵活性高的http client类库。开发灵感来自于`express`。核心只包含基本框架，需要实现的协议或者扩展将通过插件的方式来增加。`http-ext-ntlm`实现了NTLM验证协议。后续将会增加`basic`和`digest`验证支持的插件。
+
+### libxmljs-builder
+
+`libxmljs-builder`是nodejs的XML构建类库，灵感来自于Ruby的XML库`Nokogiri`。这个类库简化了构建XML的繁琐过程(从未如此畅快的构造XML)，极大提高了编程效率。
+
+### node-viewpoint
+
+`Exchange API`。实现了exchange邮件协议。
+
+### xmail
+
+The hackable mail client. 框架来自于`Atom`(Chrome引擎和Nodejs)，实现了Exchange和IMAP邮件协议，当前正在开发中。具有如下特点：
+
+1. 采用HTML最新技术来编写界面，如`Shadow DOM`(隐藏控件内部细节)和`registerElement`(自定义元素)。
+2. 使用Coffee和Less来进行高层编程，使用Grunt进行自动化构建，使用jasmine进行BDD测试，使用chromedriver进行集成测试，使用Atomdoc生成API文档。
+3. 对UI组件进行封装，使用React来编写复杂高效率的UI组件，采用MVVM模式将模型和视图进行解耦。
+4. 模型利用事件来驱动视图，视图是可卸载模块，通过这样保持着UI和模型的相对灵活性，使得自定义UI非常方便。
+5. 最重要的，代码风格来自于`Atom`，保持着清晰简洁的风格，极低的耦合度和相当高的模块化。
