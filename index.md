@@ -1,5 +1,5 @@
 ---
-title: 路人甲
+title: 刘雄
 tagline: 前端工程师
 layout: page
 ---
@@ -10,7 +10,7 @@ layout: page
 * **工作年限**: *3年*
 * **博客**: [http://liuxiong332.github.io](http://liuxiong332.github.io)
 * **Github**: [https://github.com/liuxiong332](https://github.com/liuxiong332)
-* **手机**: *111*******
+* **手机**: *18518723392*
 * **Email**: *liuxiong332@163.com*
 * **期望职位**: *NodeJS工程师，前端工程师*
 
