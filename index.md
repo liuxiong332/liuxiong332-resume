@@ -28,17 +28,30 @@ layout: page
 
 ### 金山软件(2014.7-至今)
 
-负责WPS Mail邮件客户端的设计和编程。WPS Mail是使用时下最火热的Web App方式编写的。它使用`HTML5`来描述界面，使用`Javascript/Coffeescript`来编写逻辑代码，对于性能关键部分则使用`C++`来完成。
+#### 邮件客户端
 
-作为WPS Mail的核心开发人员，主要职责有：
+  负责WPS Mail邮件客户端的设计和编程。WPS Mail是使用时下最火热的Web App方式编写的。它使用`HTML5`来描述界面，使用`Javascript/Coffeescript`来编写逻辑代码，对于性能关键部分则使用`C++`来完成。
 
-* `Exchange`邮件协议的实现和测试(实现`Exchange`的API)。
-* 将`Sqlite`数据库(持久层)和数据模型(Model)使用ORM模型映射起来，向上层暴露清晰明确的Model API。
-* 优化邮件下载速度，减少Https请求次数。
-* 采用类似LRU算法的思想对数据进行缓存，减少数据库读取次数，提高性能。
-* 采用`Promise/Yield`模型进行异步编程，避免嵌套回调。
-* 将耗时阻塞UI的操作放到`Worker`中去进行。
-* 编写部分界面和样式。
+  作为WPS Mail的核心开发人员，主要职责有：
+
+  * `Exchange`邮件协议的实现和测试(实现`Exchange`的API)。
+  * 将`Sqlite`数据库(持久层)和数据模型(Model)使用ORM模型映射起来，向上层暴露清晰明确的Model API。
+  * 优化邮件下载速度，减少Https请求次数。
+  * 采用类似LRU算法的思想对数据进行缓存，减少数据库读取次数，提高性能。
+  * 采用`Promise/Yield`模型进行异步编程，避免嵌套回调。
+  * 将耗时阻塞UI的操作放到`Worker`中去进行。
+  * 编写部分界面和样式。
+
+#### 邮件社交后台
+
+  负责邮件客户端相关的社交元素的后台设计。我们使用兼具简洁和表现力强的`Python`作为后台语言，使用轻量级异步库`tornado`作为程序框架。
+
+  作为后台的核心开发人员，主要任务有：
+
+  * 搭建后台的开发环境，使用`pybuilder`来进行自动化集成，使用`flake8`对代码进行lint，使用`pip`和`setuptools`来指定程序的依赖包。
+  * 使用`mongodb`数据库，使用`motor`作为`mongodb`的异步驱动库。
+  * 根据需求设计rest API接口。
+  * 使用MVC设计模式，让后台更加灵活，逻辑性更强。
 
 ### 致远电子(2012.7 - 2014.4)
 
@@ -80,6 +93,10 @@ layout: page
 ## Viewpoint
 
 `Exchange API`。实现了`Exchange`邮件协议，是`Xmail`的协议实现依赖包。
+
+## sqlite-orm
+
+`sqlite-orm`是sqlite数据的ORM(对象映射模型)库, 专门为客户端和sqlite进行设计和优化。灵感来自于rails的ActiveRecord。
 
 ## Xmail
 
