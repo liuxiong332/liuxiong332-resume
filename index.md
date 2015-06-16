@@ -1,6 +1,6 @@
 ---
 title: 刘雄
-tagline: 前端工程师
+tagline: 前端工程师, NodeJS、Python后端工程师
 layout: page
 ---
 
@@ -12,17 +12,20 @@ layout: page
 * **Github**: [https://github.com/liuxiong332](https://github.com/liuxiong332)
 * **手机**: *18518723392*
 * **Email**: *liuxiong332@163.com*
-* **期望职位**: *NodeJS工程师，前端工程师*
+* **期望职位**: *NodeJS工程师，前端工程师，后端工程师*
 
 ----
 
 # 个人描述
 * 技术控，`Coffee`和`Ruby`的忠实爱好者，对各种新奇技术有强烈的好奇心；
 * 崇尚优美和简约，追求优雅的编程风格，有着强烈的代码洁癖；
+* 熟悉`C/C++`编译语言，熟悉PC客户端编程技术，熟悉`chromium`和`v8`浏览器技术；
+* 熟悉`Python/Ruby/Javascript`动态语言和生态系统；
 * 熟练使用`Coffee`，`Javascript`等前端语言，熟悉ES6，熟悉`Sass/Less`等`CSS`模板语言；
 * 熟悉MVC框架`Angular`，UI类库`React`，`jQuery`和`Underscore`等工具类库；
 * 熟悉使用`Grunt`和`Gulp`进行自动化构建工具，熟悉使用`browserify`、`lint`、`uglify`等工具；
 * 熟悉`Nodejs`框架，`Nodejs`爱好者。
+* 熟悉后端开发框架`express`, `tornado`和`rails`, 对后端有一定研究。
 
 # 工作经历
 
