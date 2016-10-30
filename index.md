@@ -10,26 +10,40 @@ layout: page
 * **工作年限**: *3年*
 * **博客**: [http://liuxiong332.github.io](http://liuxiong332.github.io)
 * **Github**: [https://github.com/liuxiong332](https://github.com/liuxiong332)
-* **手机**: *18518723392*
+* **手机**: *18973434739*
 * **Email**: *liuxiong332@163.com*
 * **期望职位**: *NodeJS工程师，前端工程师，后端工程师*
 
 ----
 
 # 个人描述
+* 熟悉`React`, `Webpack`和`React-router`等生态圈技术;
 * 技术控，`Coffee`和`Ruby`的忠实爱好者，对各种新奇技术有强烈的好奇心；
 * 崇尚优美和简约，追求优雅的编程风格，有着强烈的代码洁癖；
 * 熟悉`C/C++`编译语言，熟悉PC客户端编程技术，熟悉`chromium`和`v8`浏览器技术；
 * 熟悉`Python/Ruby/Javascript`动态语言和生态系统；
 * 熟练使用`Coffee`，`Javascript`等前端语言，熟悉ES6，熟悉`Sass/Less`等`CSS`模板语言；
-* 熟悉MVC框架`Angular`，UI类库`React`，`jQuery`和`Underscore`等工具类库；
+* 熟悉MVC框架`Angular`，UI类库`React`，`jQuery`，`Underscore`和`Backbone`等工具类库；
 * 熟悉使用`Grunt`和`Gulp`进行自动化构建工具，熟悉使用`browserify`、`lint`、`uglify`等工具；
 * 熟悉`Nodejs`框架，`Nodejs`爱好者。
 * 熟悉后端开发框架`express`, `tornado`和`rails`, 对后端有一定研究。
 
 # 工作经历
 
-### 金山软件(2014.7-至今)
+### 微软Bing Ads（2015.8-至今)
+
+#### Bing Ads
+
+  负责Ads网站的若干组件。使用`Backbone`来编写可维护，模块化强的组件。
+
+  主要任务有：
+
+  * 编写线上使用较多的`DateFilter`和`GridToolbar`等组件。
+  * 协助团队完成新的`Grid`组件。
+  * 利用`React`来构建`Daily Shipping`网站，拥有诸如服务端渲染，单页面和热加载等特点。
+  * 编写`ImageDiff`测试来防止线上的ui组件break。
+
+### 金山软件(2014.7-2015.8)
 
 #### 邮件客户端
 
@@ -64,7 +78,41 @@ layout: page
 * 使用`MessagePool`和`Task`的方式进行多线程编程，减少互斥锁的使用。
 * 优化数据缓存方式和数据存储方式，提高软件的运行性能和IO性能。
 
-# 开源作品
+# 课外作品
+
+### VRView网站
+
+`VRView`是一个业余VR视频网站，地址为http://115.159.83.113/。
+
+* 后台使用`Nodejs`编写的，使用Facebook的`GraphQL`协议来定义前后端的通信协议；
+* 使用`Mongodb`作为后台数据库，高性能的文档行数据库，使用`ORM`类库`mongoose`来访问数据库；
+* 使用`Nginx`作为反向代理，将网站托管在腾讯云主机上，将图片和视频存储在腾讯云存储上；
+* 前端使用`React`来构造，由于前后端都使用`ES6`，前后端公用部分代码，使用服务端渲染来提高浏览器加载速度；
+* 使用`React-router`来进行URL路由，构建无刷新的单页面应用；
+* 使用`Webpack`将`Nodejs`模块和其他的资源(css, 图片)绑定起来，生成前端可运行代码；
+* 使用`hot-reload`插件开启热加载，无需刷新自动加载UI，提高开发效率；
+* 使用`React-bootstrap`利用`Bootstrap` css库来构建前端UI；
+* 使用`SASS`来编写前端样式。
+
+### VRView客户端
+
+  `VRView-client`是VRView的PC客户端。
+
+  * 使用前端技术来编写桌面软件，共享部分`VRView`模块，使用Electron作为运行环境；
+  * 使用`electron-builder`来打包和分发安装包；
+  * 使用`squirrel`来实现自动更新，使用`nuts`来作为自动更新服务器后台。
+
+  `VRView-ios`是VRView的ios APP。
+
+  * 用`swift 3`编写，使用`cocoapods`来管理和安装依赖包；
+  * 使用`AFNetworking`来进行网络请求，使用`SwiftyJSON`来处理`JSON`数据；
+  * 使用`AutoLayout`来进行UI布局，适配各种屏幕，应用`SnapKit`来简化自动布局的书写；
+  * 使用`Realm`实时数据库来存储和处理数据。
+
+  `VRView-native`是VRView的移动APP。
+
+  * 使用`React native`来编写移动APP，使用`flexbox`来进行UI布局；
+  * 和ios客户端类似，使用`Realm`来存储和处理数据。
 
 ### Atom
 
