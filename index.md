@@ -7,7 +7,7 @@ layout: page
 # 个人信息
 
 * **毕业院校**: *北京理工大学*
-* **工作年限**: *3年*
+* **工作年限**: *5年*
 * **博客**: [http://liuxiong332.github.io](http://liuxiong332.github.io)
 * **Github**: [https://github.com/liuxiong332](https://github.com/liuxiong332)
 * **手机**: *18973434739*
