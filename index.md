@@ -18,11 +18,11 @@ layout: page
 
 # 个人描述
 * 熟悉`React`, `Webpack`和`React-router`等生态圈技术;
-* 技术控，`Coffee`和`Ruby`的忠实爱好者，对各种新奇技术有强烈的好奇心；
+* 技术控，`Coffee`,`Ruby`, `Elixir`的忠实爱好者，对各种新奇技术有强烈的好奇心；
 * 崇尚优美和简约，追求优雅的编程风格，有着强烈的代码洁癖；
 * 熟悉`C/C++`编译语言，熟悉PC客户端编程技术，熟悉`chromium`和`v8`浏览器技术；
 * 熟悉`Python/Ruby/Javascript`动态语言和生态系统；
-* 熟练使用`Coffee`，`Javascript`等前端语言，熟悉ES6，熟悉`Sass/Less`等`CSS`模板语言；
+* 熟练使用`Coffee`，`Javascript`，`typescript`等前端语言，熟悉ES6，熟悉`Sass/Less`等`CSS`模板语言；
 * 熟悉MVC框架`Angular`，UI类库`React`，`jQuery`，`Underscore`和`Backbone`等工具类库；
 * 熟悉使用`Grunt`和`Gulp`进行自动化构建工具，熟悉使用`browserify`、`lint`、`uglify`等工具；
 * 熟悉`Nodejs`框架，`Nodejs`爱好者。
@@ -30,7 +30,37 @@ layout: page
 
 # 工作经历
 
-### 微软Bing Ads（2015.8-至今)
+### 福米科技
+
+  负责福米科技金融App（Web App）和PC客户端的架构和研发。其中Web App可以通过 https://app.webull.com 浏览，Windows/Mac客户端可以通过 http://static.webull.com/DesktopClient/download.html 下载。
+
+#### 技术选型
+
+  由于我们开发时间短，技术人员有限（只有三个前端工程师），我们选择了快速开发框架`React`，配合我们自研发的类Redux数据流框架`event-flux`(https://github.com/liuxiong332/event-flux)，快速开发和迭代功能。
+  
+  `React`使我们从UI中的复杂状态中解放出来，专注于业务代码，同时通过virtual-dom能提高DOM的渲染效率。
+
+  `event-flux`引入了`Redux`中的单向数据流和可预测状态，同时将Store进行模块化处理，避免了`Redux`中异步状态的编程麻烦。
+
+  我们的PC客户端使用`Electron`，它允许我们使用前端技术来快速开发PC客户端。
+
+  由于我们有Web App和PC App，我们需要使用一套代码来打包到不同环境。于是我们使用`Webpack`来分别打包成浏览器使用的和`Electron`兼容的Minified版本，然后分发出去即可。
+
+#### 开发难点
+
+  由于桌面软件拥有很多桌面特有的组件，比如对话框，表格等，我们将这些模块都封装了可复用的组件，供各个业务模块调用，大大减少了重复劳动和开发时间。
+
+  主要难点组件：
+
+  * 对话框--需要实现可拖拽，可关闭以及记录用户拖拽的位置；
+  * 表格--需要实现固定表头和部分列，动态加载，下拉加载更多，以及性能优化（通过只展示可见的DOM来提高性能）
+  * 分时图，K线图，趋势图--通过SVG配合d3来展示数据
+  * 行情数据推送--通过WebSocket和MQTT协议来进行数据推送。业务方通过监听必要的数据，然后通过`event-flux`将实时数据发送到前台页面，前台页面然后实时更新，当页面Unmount的时候，将取消对数据的订阅。
+  * 交易模块--交易拥有很多复杂的逻辑，包括对浮点数的处理（浮点数计算不精确问题），并且在不同的页面都需要交易模块，我们将模块进行高度定制化，通过传入不同参数来定制模块。
+  * 存储--为了是我们的客户端更加流畅，我们使用文档型数据库`indexdb`的包装库`Dexie`来存储我们的本地数据。
+  * 自动更新--使用`electron-builder`提供的更新方案来自动更新客户端。
+
+### 微软Bing Ads（2015.8-2016.11)
 
 #### Bing Ads
 
