@@ -1,13 +1,13 @@
 ---
 title: 刘雄
-tagline: 前端工程师, NodeJS、Python后端工程师
+tagline: 前端工程师, NodeJS工程师
 layout: page
 ---
 
 # 个人信息
 
 * **毕业院校**: *北京理工大学*
-* **工作年限**: *5年*
+* **工作年限**: *7年*
 * **博客**: [http://liuxiong332.github.io](http://liuxiong332.github.io)
 * **Github**: [https://github.com/liuxiong332](https://github.com/liuxiong332)
 * **手机**: *18973434739*
@@ -17,48 +17,51 @@ layout: page
 ----
 
 # 个人描述
-* 熟悉`React`, `Webpack`和`React-router`等生态圈技术;
-* 技术控，`Coffee`,`Ruby`, `Elixir`的忠实爱好者，对各种新奇技术有强烈的好奇心；
-* 崇尚优美和简约，追求优雅的编程风格，有着强烈的代码洁癖；
-* 熟悉`C/C++`编译语言，熟悉PC客户端编程技术，熟悉`chromium`和`v8`浏览器技术；
-* 熟悉`Python/Ruby/Javascript`动态语言和生态系统；
+* 熟悉`React`, `Webpack`, `React-router`, `Redux`等生态圈技术;
+* 熟悉`Electron`和`react-native`等构建Web/PC App的方法;
+* 熟悉使用Jest对js和React组件进行测试;
+* 崇尚优美和简约，追求优雅的编程风格，有着强烈的代码洁癖;
 * 熟练使用`Coffee`，`Javascript`，`typescript`等前端语言，熟悉ES6，熟悉`Sass/Less`等`CSS`模板语言；
-* 熟悉MVC框架`Angular`，UI类库`React`，`jQuery`，`Underscore`和`Backbone`等工具类库；
+* 熟悉`C/C++`编译语言，熟悉PC客户端编程技术，熟悉`chromium`和`v8`浏览器技术;
 * 熟悉使用`Grunt`和`Gulp`进行自动化构建工具，熟悉使用`browserify`、`lint`、`uglify`等工具；
 * 熟悉`Nodejs`框架，`Nodejs`爱好者。
 * 熟悉后端开发框架`express`, `tornado`和`rails`, 对后端有一定研究。
+* 技术控，`Coffee`,`Ruby`, `Elixir`的忠实爱好者，对各种新奇技术有强烈的好奇心;
+* 对机器学习，深度学习进行了持续的关注；
 
 # 工作经历
 
 ### 福米科技
 
-  负责福米科技金融App（Web App）和PC客户端的架构和研发。其中Web App可以通过 https://app.webull.com 浏览，Windows/Mac客户端可以通过 http://static.webull.com/DesktopClient/download.html 下载。
+  负责福米科技金融股票客户端App（Web App）和PC客户端的架构和研发。股票客户端是一款支持多窗口数据交互的Electron/Web App，它通过我自研的多进程数据共享架构实现了多进程Electron多窗口功能，同时借助React的高效率和组件话提高了我们的开发效率，同时使得功能更加模块化，更易维护。
 
 #### 技术选型
 
-  由于我们开发时间短，技术人员有限（只有三个前端工程师），我们选择了快速开发框架`React`，配合我们自研发的类Redux数据流框架`event-flux`(https://github.com/liuxiong332/event-flux)，快速开发和迭代功能。
+  由于我们开发时间短，技术人员有限，我们选择了快速开发框架`React`，配合我们自研发的类Redux数据流框架`event-flux`(https://github.com/liuxiong332/event-flux)，快速开发和迭代功能。
   
   `React`使我们从UI中的复杂状态中解放出来，专注于业务代码，同时通过virtual-dom能提高DOM的渲染效率。
 
-  `event-flux`引入了`Redux`中的单向数据流和可预测状态，同时将Store进行模块化处理，避免了`Redux`中异步状态的编程麻烦。
+  `event-flux`引入了`Redux`中的单向数据流和可预测状态，同时将Store进行模块化处理，避免了`Redux`中异步状态的编程麻烦。支持Electron多进程多窗口架构，允许我们同时创建多个Electron窗口，并对数据进行共享，使得Electron创建多窗口变得异常简单和灵活
 
   我们的PC客户端使用`Electron`，它允许我们使用前端技术来快速开发PC客户端。
 
   由于我们有Web App和PC App，我们需要使用一套代码来打包到不同环境。于是我们使用`Webpack`来分别打包成浏览器使用的和`Electron`兼容的Minified版本，然后分发出去即可。
 
-#### 开发难点
+#### 主要成就
 
-  由于桌面软件拥有很多桌面特有的组件，比如对话框，表格等，我们将这些模块都封装了可复用的组件，供各个业务模块调用，大大减少了重复劳动和开发时间。
-
-  主要难点组件：
-
-  * 对话框--需要实现可拖拽，可关闭以及记录用户拖拽的位置；
-  * 表格--需要实现固定表头和部分列，动态加载，下拉加载更多，以及性能优化（通过只展示可见的DOM来提高性能）
-  * 分时图，K线图，趋势图--通过SVG配合d3来展示数据
-  * 行情数据推送--通过WebSocket和MQTT协议来进行数据推送。业务方通过监听必要的数据，然后通过`event-flux`将实时数据发送到前台页面，前台页面然后实时更新，当页面Unmount的时候，将取消对数据的订阅。
-  * 交易模块--交易拥有很多复杂的逻辑，包括对浮点数的处理（浮点数计算不精确问题），并且在不同的页面都需要交易模块，我们将模块进行高度定制化，通过传入不同参数来定制模块。
-  * 存储--为了是我们的客户端更加流畅，我们使用文档型数据库`indexdb`的包装库`Dexie`来存储我们的本地数据。
-  * 自动更新--使用`electron-builder`提供的更新方案来自动更新客户端。
+  * `event-flux`多进程数据共享架构，使得Electron很容易创建数据共享的多窗口
+  * 引入了`material-ui`的样式方案`JSS`，使得样式支持组件化和定制化
+  * 股票图表架构，封装了canvas底层结构，并提供简单的React组件API，使得业务组件更加独立，解耦
+  * 交易中实现可自由拖拽伸缩的组件窗口框架，支持各种灵活的业务组件和业务配置
+  * 通过Context API实现了交易组件在不同场景下都能够正常使用
+  * 封装股票数据模块，包括推送数据，业务方只需要使用高阶React组件即可实现数据订阅
+  * 自定义表格，需要实现固定表头和部分列，动态加载，下拉加载更多，以及性能优化（通过只展示可见的DOM来提高性能）
+  * 实现了分时图，K线图，趋势图等图形组件，通过新的图标模块配合d3来展示数据
+  * 处理行情数据推送，通过WebSocket和MQTT协议来进行数据推送。业务方通过监听必要的数据，然后通过`event-flux`将实时数据发送到前台页面，前台页面然后实时更新，当页面Unmount的时候，将取消对数据的订阅。
+  * 实现交易模块，交易拥有很多复杂的逻辑，包括对浮点数的处理（浮点数计算不精确问题），并且在不同的页面都需要交易模块，我们将模块进行高度定制化，通过传入不同参数来定制模块。
+  * 定制存储方案，简单数据使用`localStorage/electron-store`进行存储，结构化数据使用文档型数据库`indexdb`的包装库`Dexie`，Electron使用`leveldb`存储数据，并在`Dexie`和`leveldb`上建立了一个封装层`PlatformDB`来屏蔽了两者差异。
+  * 实现云同步功能，使用`PlatformDB`同样的API来进行云存储，并实现了云端和本地存储的
+  * 定制自动更新功能，使用`electron-builder`提供的更新方案来自动更新客户端。
 
 ### 微软Bing Ads（2015.8-2016.11)
 
@@ -150,36 +153,12 @@ layout: page
 
 * 修正了拖拽打开文件的bug；
 * 增加了特性--可自由用鼠标拖动缩放工作区的大小，而且保存状态从而使得重启后保持不变。
-
-### Yeoman插件
-
-发布了若干个**Yeoman**模板插件。
-
-* `generator-node-gulp-coffee`用来生成使用`coffee`和`gulp`的模板，是我最常用的`Nodejs`模板(集成了`lint`、`test`、`converage`、`Travis CI`等功能)。
-
-* `generator-karma-browserify`用来为前端APP增加`karma`和`browserify`支持。`browserify`使得前端可以可以重用`Nodejs`模块，最重要的是可以使用CMD模型进行编程。
-
-### http-ext
-
-`http-ext`是可扩展的、灵活性高的**http client**类库。开发灵感来自于`express`。核心只包含基本框架，需要实现的协议或者扩展将通过插件的方式来增加。当前包含如下插件：
-
-* `http-ext-ntlm`实现了NTLM验证协议。
-
-后续将会增加`basic`和`digest`验证支持的插件。
-
-## libxmljs-builder
-
-`libxmljs-builder`是`nodejs`的XML构建类库，灵感来自于`Ruby`的XML库`Nokogiri`。这个类库简化了构建XML的繁琐过程(从未如此畅快的构造XML)，极大提高了编程效率。
-
-## Viewpoint
-
-`Exchange API`。实现了`Exchange`邮件协议，是`Xmail`的协议实现依赖包。
-
-## sqlite-orm
+ 
+### sqlite-orm
 
 `sqlite-orm`是sqlite数据的ORM(对象映射模型)库, 专门为客户端和sqlite进行设计和优化。灵感来自于rails的ActiveRecord。
 
-## Xmail
+### Xmail
 
 **The hackable mail client**。框架来自于`Atom`(`Chrome`引擎和`Nodejs`)，实现了`Exchange`和`IMAP`邮件协议，当前正在开发中。具有如下特点：
 
