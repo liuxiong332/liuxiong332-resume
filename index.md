@@ -12,34 +12,67 @@ layout: page
 * **Github**: [https://github.com/liuxiong332](https://github.com/liuxiong332)
 * **手机**: *18973434739*
 * **Email**: *liuxiong332@163.com*
-* **期望职位**: *NodeJS工程师，前端工程师，后端工程师*
+* **期望职位**: *全栈，NodeJS，前端，后端，机器学习*
 
 ----
 
 # 个人描述
-* 熟悉`React`, `Webpack`, `React-router`, `Redux`等生态圈技术;
-* 熟悉`Electron`和`react-native`等构建Web/PC App的方法;
+
+## 前端
+* 熟悉`React`/`Vue`前端框架, 熟悉相关的`Webpack`，`React-router`，`Redux`等生态圈技术;
+* 熟悉`Electron`构建桌面客户端，`react-native`和`Flutter`构建移动/桌面App方法;
 * 熟悉使用Jest对js和React组件进行测试;
-* 崇尚优美和简约，追求优雅的编程风格，有着强烈的代码洁癖;
-* 熟练使用`Coffee`，`Javascript`，`typescript`等前端语言，熟悉ES6，熟悉`Sass/Less`等`CSS`模板语言；
-* 熟悉`C/C++`编译语言，熟悉PC客户端编程技术，熟悉`chromium`和`v8`浏览器技术;
+* 熟练使用`Coffee`，`Javascript`，`typescript`等前端语言，熟悉ES6，熟悉`Sass/Less`等`CSS`模板语言，熟悉`Css In Js`；
+* 熟悉`chromium`和`v8`浏览器技术;
 * 熟悉使用`Grunt`和`Gulp`进行自动化构建工具，熟悉使用`browserify`、`lint`、`uglify`等工具；
-* 熟悉`Nodejs`框架，`Nodejs`爱好者。
-* 熟悉后端开发框架`express`, `tornado`和`rails`, 对后端有一定研究。
-* 技术控，`Coffee`,`Ruby`, `Elixir`的忠实爱好者，对各种新奇技术有强烈的好奇心;
-* 对机器学习，深度学习进行了持续的关注；
+
+## 后端
+* 熟悉常见的后端Web框架，比如`Java`的`Spring Boot`，`Kotlin`的`Ktor`，`Nodejs`的`Express`，`Golang`的`Gin/Beego`，`Python`的`Tornado`。
+* 熟悉数据库`MySQL`，文档数据库`Mongo`和缓存数据库`Redis`，并对数据库高可用，高性能有一定研究。
+* 熟悉MQ队列`RabbitMQ`, `RocketMQ`和`Kafka`。
+* 熟悉分布式锁/分布式事务等分布式常见解决方案。
+* 熟悉常见的微服务架构`Spring Cloud`。
+
+## 云原生
+* 熟悉使用`Docker`进行服务部署。
+* 熟悉`Docker`编排框架`Docker Swarm`和`Kubernetes`。
+* 熟悉常见的CI/CD流程。
+
+## 机器学习
+* 熟悉常见的机器学习算法。
+* 了解深度学习理论，并了解常见的深度学习模型，熟悉`Tensorflow/Pytorch`。
+* 了解部分机器交易的算法。
+
 
 # 工作经历
 
 ## 福米科技
 
+### 机器交易研究
+
+  基于当前常见的机器交易模型进行机器交易方面的研究，包括各种因子对交易方面的影响，各种指标对交易方面的研究等。
+
+### Pine 用户自定义指标/策略语言
+
+  `Pine`一种金融领域使用的编程语言，用户可以用它进行自定义指标和策略，从而根据实现自定义方式来发掘投资机会。 
+
+  * 使用`Rust`进行编写，拥有比`C/C++`更加丰富的语言特性，并且没有运行时，很适合编译成WebAssembly（Web/Electron使用）和外部库（Android/IOS使用）。
+  * 包含语法树（`AST`），语法检查器（`Syntax Checker`）和运行时（`Runtime`）来确保用户输入的语句可以正常解析。
+  * 用户可以使用的函数通过外部标准库的方式进行提供，语言核心开放外部库API来丰富语言的表现力。
+  * 包含单元测试/集成测试等各种测试用例，保证解释器的健壮性。
+  * `VSCode`的语言插件包括语法高亮和自动补全等功能，还包括一个外部的语言服务`LSP`（`Rust`编写的解释器），提供语法报错和自动提示等功能。
+  * 嵌入到Web中的`CodeMirror`编辑器插件，以及文档中`Pine`语法高亮的`highlight.js`。
+  * 根据核心库自动生成`API`签名，然后配合外部文档自动生成`API`引用网页。
+
+### Webull客户端/Web
+
   负责福米科技金融股票客户端App（Web App）和PC客户端的架构和研发。股票客户端是一款支持多窗口数据交互的Electron/Web App，它通过我自研的多进程数据共享架构实现了多进程Electron多窗口功能，同时借助React的高效率和组件话提高了我们的开发效率，同时使得功能更加模块化，更易维护。
 
-### 技术选型
+#### 技术选型
 
   由于我们开发时间短，技术人员有限，我们选择了快速开发框架`React`，配合我们自研发的类Redux数据流框架`event-flux`(https://github.com/liuxiong332/event-flux)，快速开发和迭代功能。
   
-  `React`使我们从UI中的复杂状态中解放出来，专注于业务代码，同时通过virtual-dom能提高DOM的渲染效率。
+  `React`使我们从UI中的复杂状态中解放出来，专注于业务代码，同时通过virtual-dom能提高DOM的渲染效率，最近新组件已经切换到了`React Hooks`。
 
   `event-flux`引入了`Redux`中的单向数据流和可预测状态，同时将Store进行模块化处理，避免了`Redux`中异步状态的编程麻烦。支持Electron多进程多窗口架构，允许我们同时创建多个Electron窗口，并对数据进行共享，使得Electron创建多窗口变得异常简单和灵活
 
@@ -47,7 +80,7 @@ layout: page
 
   由于我们有Web App和PC App，我们需要使用一套代码来打包到不同环境。于是我们使用`Webpack`来分别打包成浏览器使用的和`Electron`兼容的Minified版本，然后分发出去即可。
 
-### 主要成就
+#### 主要成就
 
   * `event-flux`多进程数据共享架构，使得Electron很容易创建数据共享的多窗口
   * 引入了`material-ui`的样式方案`JSS`，使得样式支持组件化和定制化
@@ -112,6 +145,20 @@ layout: page
 * 优化数据缓存方式和数据存储方式，提高软件的运行性能和IO性能。
 
 # 课外作品
+
+### 番茄工作法App
+
+使用Flutter完成的一个番茄工作法App，支持移动端和Mac客户端。
+
+### 学习课程网站
+
+一个类似于`慕课网`之类的课程网站，使用`Spring Boot`，`MyBatis Plus`，`MySQL`，`Redis`等编写而成。
+
+### 安全帽检测应用
+
+* 前端使用React和Video.js完成
+* 后端服务使用`Spring Boot`完成
+* 安全帽检测这块使用`YoloV3`模型完成的一个Python后端服务，服务会将原始`RTSP`视频流使用`OpenCV`进行采集和分析，其中使用`FPMEG`将视频转换成`HLS`视频流，并写入到`Nginx`目录中，然后通过`Nginx`提供视频服务。
 
 ### VRView网站
 
